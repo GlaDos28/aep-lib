@@ -2,6 +2,8 @@
 
 aep-lib (A&E Process library, or Assimilation & Equalization process library) is a library for game development, which solves a problem, described in "Thesis.md" file (RUS lang).
 
+See [github page](https://github.com/GlaDos28/aep-lib) for Thesis.md and other files
+
 ### Usage
 
 ```bash
@@ -13,7 +15,7 @@ const aep = require("aep-lib");
 
 const aepDescriptor = new index.AEProcessDescriptor(
     (object) => true,
-    new index.SignDescriptor("num", 10 /* threshold */, 5 /* accept time */, index.utilFunctions.getLinearConvergentImpact("num", 1 /* converge rate */))
+    new aep.SignDescriptor("num", 10 /* threshold */, 5 /* accept time */, aep.utilFunctions.getLinearConvergentImpact("num", 1 /* converge rate */))
 );
 
 const objects = [
@@ -22,7 +24,7 @@ const objects = [
     { num : 104 }
 ];
 
-const aeProcess = new index.AEProcess(aepDescriptor);
+const aeProcess = new aep.AEProcess(aepDescriptor);
 
 for (let i = 0; i < 5; i++) {
     aeProcess.process(1 /* time units passed */, objects);
