@@ -8,6 +8,7 @@
     "coverage": "nyc mocha",
     "docs": "jsdoc -c jsdoc-conf.json ./"
   },
+  "repository": "https://github.com/GlaDos28/aep-lib.git",
   "keywords": [
     "A&E",
     "gamedev",
